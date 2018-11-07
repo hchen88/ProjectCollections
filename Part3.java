@@ -1,5 +1,13 @@
 package classesProject;
-
+/**	
+ * Scott Arima and Howard Chen
+ * 05 November 2018
+ * Purpose of the program- Analyze different the
+ *  efficiency of different Collection TYpoes
+ * Inputs: item text file, user input for number 
+ * of teams in scavenger hunt 
+ * Output: 
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -58,7 +66,11 @@ public class Part3 {
 			from the list. Shuffle the list after loading the items 
 			each time. Find the total time it takes to add the items to all of the teams.
 			*/
-			ArrayList<String> teamList =  new ArrayList<String>();
+			//Arraylist<ArrayList<String>>  teamLists = new ArrayList<ArrayList<String>>();
+			
+
+			
+			ArrayList<String>[] teams = (ArrayList<String>[])new ArrayList[numberOfTeams];
 			
 			for ( int i = 0; i < numberOfTeams; i++) {
 				teamList.add(arrayList.get(i));

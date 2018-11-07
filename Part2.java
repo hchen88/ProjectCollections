@@ -1,9 +1,17 @@
 package classesProject;
-
+/**	
+ * Scott Arima and Howard Chen
+ * 08 October 2018
+ * Purpose of the program- Simulate Vending Machine with capabilities making transactions, 
+ * 						   re-stocking products, withdrawing funds.  
+ * Inputs: selections from vending menu
+ * Output: Game Log - Displays vending actions, insufficient funds/stock.
+ */
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class Part2 {
@@ -11,34 +19,28 @@ public class Part2 {
 	public static void main(String [] args) {
 		double start = 0; // start time
 		double end = 0; // end time
-		double hSetTime, tSetTime;
-		HashSet<String> hashSet = new HashSet<String>();
-		TreeSet<String> treeSet =  new TreeSet<String>();
+		double setTime;
+		Set set = null;
+		
+		if(args[0].equals("Tree")) {
+			set = new TreeSet<String>();
+		} else {
+			set = new HashSet<String>();
+		}
+		
 		File inFile = new File("alice.txt");
 		
 		try {
 			Scanner in = new Scanner(inFile);
 	        while (in.hasNext()) {
 	        	start = System.nanoTime();
-	            hashSet.add(in.next());
+	            set.add(in.next());
 	        }
 	        end = System.nanoTime();
 
-	        hSetTime = end - start;
+	        setTime = end - start;
 	        
-	        System.out.println("HashSet took " + hSetTime + " nanoseconds to input "
-	        		+ "every word in alice.txt File");
-	        
-	        in = new Scanner(inFile);
-	        while (in.hasNext()) {
-	        	start = System.nanoTime();
-	            treeSet.add(in.next());
-	        }
-	        end = System.nanoTime();
-	        
-	        tSetTime = end - start;
-	        
-	        System.out.println("TreeSet took " + tSetTime + " nanoseconds to input "
+	        System.out.println(args[0] +"Set took " + setTime + " nanoseconds to input "
 	        		+ "every word in alice.txt File");
 	        
 		} catch (FileNotFoundException e) {
