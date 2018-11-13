@@ -30,7 +30,7 @@ public class Part3 {
 //		List list = null;	
 //		if(args[0].equals("ArrayList")) {
 //			list = new ArrayList<String>();
-//		} else if (args[0].equals("ArrayList")) {
+//		} else if (args[0].equals("LinkedList")) {
 //			list = new LinkedList<String>();
 //		}
 		
@@ -55,21 +55,13 @@ public class Part3 {
 			}
 			end = System.nanoTime();
 			aTime = end - start;
+
 			System.out.println("ArrayList took " + aTime + 
 					" nanoseconds to traverse twice");
 			
-			itr = list.iterator();
-			while (itr.hasNext()){
-				start = System.nanoTime();
-			    itr.next();
-			}
-			for (int i = list.size() - 1; i >= 0; i--) {
-			    System.out.print("");
-			}
-			end = System.nanoTime();
-			lTime = end - start;
-			System.out.println("LinkedList took " + lTime + 
-					" nanoseconds to traverse twice");
+//			System.out.println("Linked List took " + aTime + 
+//					" nanoseconds to traverse twice");
+			
 			System.out.println("How many teams will play the game?");
 			String answer = in.nextLine().trim();
 			int numberOfTeams = Integer.parseInt(answer);
@@ -82,7 +74,6 @@ public class Part3 {
 			ArrayList<String>[] teams = new ArrayList[numberOfTeams];
 			//LinkedList<String>[] teams = new LinkedList[numberOfTeams];
 
-			
 			//Loading List time
 			start = System.nanoTime();
 			for(int i = 0; i < numberOfTeams ; i++) { 
