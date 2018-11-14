@@ -19,12 +19,12 @@ public class Part2 {
 	public static void main(String [] args) {
 		double start = 0; // start time
 		double end = 0; // end time
-		double setTime;
+		double addTime, searchTime;
 		Set set = null;
 		
-		if(args[0].equals("Tree")) {
+		if(args[0].equals("TreeSet")) {
 			set = new TreeSet<String>();
-		} else {
+		} else if (args[0].equals("HashSet")){
 			set = new HashSet<String>();
 		}
 		
@@ -32,16 +32,32 @@ public class Part2 {
 		
 		try {
 			Scanner in = new Scanner(inFile);
+			
+			//add time
 	        while (in.hasNext()) {
 	        	start = System.nanoTime();
 	            set.add(in.next());
 	        }
 	        end = System.nanoTime();
 
-	        setTime = end - start;
+	        addTime = end - start;
 	        
-	        System.out.println(args[0] +"Set took " + setTime + " nanoseconds to input "
+	        System.out.println(args[0] +" took " + addTime + " nanoseconds to input "
 	        		+ "every word in alice.txt File");
+	        
+	        //search time
+	        start = System.nanoTime();
+	        for( int i = 0; i < 100; i++) {
+	        	set.contains("remove");
+	        }
+	        end = System.nanoTime();
+	        searchTime = end - start;
+	        
+	        System.out.println(args[0] +" took " + searchTime + 
+	        		" nanoseconds to search  for \"remove\" 100 times "
+	        		+ "every word in alice.txt File");
+	        
+	       
 	        
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
