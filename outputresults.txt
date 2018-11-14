@@ -1,0 +1,77 @@
+HashMap loading data time: 1633565.0 nanoseconds
+
+{qintar=15, qwerty=21, qaids=15, qintars=16, qabalas=18, qi=11, qis=12, qadis=15, qabala=17, qabalah=21, qanats=15, qindars=17, qaid=14, qadi=14, qindarka=22, qoph=18, qat=12, qabalahs=22, qwertys=22, qindar=16, qophs=19, qiviuts=19, qanat=14, qiviut=18, qats=13}
+HashMap searching data time: 757760.0 nanoseconds
+
+
+HashMap loading data time: 1578098.0 nanoseconds
+
+{qintar=15, qwerty=21, qaids=15, qintars=16, qabalas=18, qi=11, qis=12, qadis=15, qabala=17, qabalah=21, qanats=15, qindars=17, qaid=14, qadi=14, qindarka=22, qoph=18, qat=12, qabalahs=22, qwertys=22, qindar=16, qophs=19, qiviuts=19, qanat=14, qiviut=18, qats=13}
+HashMap searching data time: 727893.0 nanoseconds
+
+TreeMap loading data time: 1786596.0 nanoseconds
+
+{qabala=17, qabalah=21, qabalahs=22, qabalas=18, qadi=14, qadis=15, qaid=14, qaids=15, qanat=14, qanats=15, qat=12, qats=13, qi=11, qindar=16, qindarka=22, qindars=17, qintar=15, qintars=16, qis=12, qiviut=18, qiviuts=19, qoph=18, qophs=19, qwerty=21, qwertys=22}
+TreeMap searching data time: 863858.0 nanoseconds
+
+
+TreeSetSet took 19058.0 nanoseconds to input every word in alice.txt File
+HashSetSet took 13369.0 nanoseconds to input every word in alice.txt File
+
+
+ArrayList took 74809.0 nanoseconds to traverse twice
+How many teams will play the game?
+20
+It takes 851627.0 nanoseconds to add/shuffle 100 items into 20 team lists
+
+Enter in a position in the list for retrieving and inserting elements: 30
+
+It takes 6826.0 nanoseconds to retieve an item at position 30 from 20 team lists
+
+It takes 14222.0 nanoseconds to add an item at position 3020 team lists
+
+It takes 853.0 nanoseconds to retieve a random item at position 28 from 20 team lists
+
+
+
+ArrayList took 72533.0 nanoseconds to traverse twice
+How many teams will play the game?
+100
+It takes 1594596.0 nanoseconds to add/shuffle 100 items into 100 team lists
+
+Enter in a position in the list for retrieving and inserting elements: 50
+
+It takes 7965.0 nanoseconds to retieve an item at position 50 from 100 team lists
+
+It takes 30151.0 nanoseconds to add an item at position 50100 team lists
+
+It takes 1707.0 nanoseconds to retieve a random item at position 61 from 100 team lists
+
+LinkedList took 73387.0 nanoseconds to traverse twice
+How many teams will play the game?
+20
+It takes 755769.0 nanoseconds to add/shuffle 100 items into 20 team lists
+
+Enter in a position in the list for retrieving and inserting elements: 50
+
+It takes 25600.0 nanoseconds to retieve an item at position 50 from 20 team lists
+
+It takes 19911.0 nanoseconds to add an item at position 5020 team lists
+
+It takes 6542.0 nanoseconds to retieve a random item at position 27 from 20 team lists
+
+
+LinkedList took 78222.0 nanoseconds to traverse twice
+How many teams will play the game?
+100
+It takes 1557050.0 nanoseconds to add/shuffle 100 items into 100 team lists
+
+Enter in a position in the list for retrieving and inserting elements: 50
+
+It takes 57458.0 nanoseconds to retieve an item at position 50 from 100 team lists
+
+It takes 73672.0 nanoseconds to add an item at position 50100 team lists
+
+It takes 15075.0 nanoseconds to retieve a random item at position 37 from 100 team lists
+
+
