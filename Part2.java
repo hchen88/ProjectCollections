@@ -1,12 +1,15 @@
-package classesProject;
-/**	
- * Scott Arima and Howard Chen
- * 08 October 2018
- * Purpose of the program- Simulate Vending Machine with capabilities making transactions, 
- * 						   re-stocking products, withdrawing funds.  
- * Inputs: selections from vending menu
- * Output: Game Log - Displays vending actions, insufficient funds/stock.
+package projectCollections;
+
+/**
+ * 
+ * Scott Arima & Howard Chen
+ * November 5, 2018
+ * Purpose of program: analyze HashSet and TreeSet on efficiency for loading data and searching data
+ * Inputs: text file names through the command line arguments
+ * Outputs: loading data and searching data times in nanoseconds for HashSet and TreeSet
+ *
  */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashSet;
@@ -24,7 +27,7 @@ public class Part2 {
 		
 		if(args[0].equals("TreeSet")) {
 			set = new TreeSet<String>();
-		} else if (args[0].equals("HashSet")){
+		} else if(args[0].equals("HashSet")) {
 			set = new HashSet<String>();
 		}
 		
@@ -32,8 +35,6 @@ public class Part2 {
 		
 		try {
 			Scanner in = new Scanner(inFile);
-			
-			//add time
 	        while (in.hasNext()) {
 	        	start = System.nanoTime();
 	            set.add(in.next());
@@ -56,8 +57,6 @@ public class Part2 {
 	        System.out.println(args[0] +" took " + searchTime + 
 	        		" nanoseconds to search  for \"remove\" 100 times "
 	        		+ "every word in alice.txt File");
-	        
-	       
 	        
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

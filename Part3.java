@@ -18,14 +18,17 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Part3 {
+
+public class Part3  {
+
 	
-	   public static void main(String [] args) {
-			
+	public static void main(String [] args) {
+		   	
+		   
 			String line;
-			double start = 0, end = 0, aTime, lTime;
+			double start = 0, end = 0, lTime;
 			File inFile = new File("items.txt");
-			List list = null;
+			List<String> list = null;
 			if(args[0].equals("ArrayList")) {
 				list = new ArrayList<String>();
 			} else if (args[0].equals("LinkedList")) {
@@ -40,6 +43,7 @@ public class Part3 {
 					line = input.nextLine();
 					list.add(line);				
 				}
+				
 				Iterator<String> itr = list.iterator();
 				while (itr.hasNext()){
 					start = System.nanoTime();
@@ -50,9 +54,9 @@ public class Part3 {
 					System.out.print("");
 				}
 				end = System.nanoTime();
-				aTime = end - start;
+				lTime = end - start;
 
-				System.out.println(args[0] +" took " + aTime + 
+				System.out.println(args[0] +" took " + lTime + 
 						" nanoseconds to traverse twice");
 				
 				System.out.println("How many teams will play the game?");
@@ -81,9 +85,8 @@ public class Part3 {
 				
 				end = System.nanoTime();	
 				teamTime = end - start;
-				System.out.println("It takes " + teamTime + 
-						" nanoseconds to add/shuffle 100 items into " + numberOfTeams 
-						+ " team lists\n");
+				System.out.println("It took " + teamTime + 
+						" nanoseconds to add/shuffle 100 items");
 				
 				//Retrieving an element time
 				System.out.print("Enter in a position in the list for retrieving "
@@ -97,10 +100,8 @@ public class Part3 {
 				}
 				end = System.nanoTime();	
 				teamTime = end - start;
-				System.out.println("\nIt takes " + teamTime + 
-						" nanoseconds to retieve an item at position " + position + 
-						" from " + numberOfTeams 
-						+ " team lists");
+				System.out.println("\nIt took " + teamTime + 
+						" nanoseconds to retrieve  an item at position " + position);
 				
 				// inserting an element at position in each of the lists
 				start = System.nanoTime();
@@ -109,9 +110,8 @@ public class Part3 {
 				}
 				end = System.nanoTime();	
 				teamTime = end - start;
-				System.out.println("\nIt takes " + teamTime + 
-						" nanoseconds to add an item at position "  + position
-						+ numberOfTeams + " team lists");
+				System.out.println("\nIt took " + teamTime + 
+						" nanoseconds to add an item at position "  + position);
 				
 				Random rand = new Random();
 				position = rand.nextInt(100) + 0; 
@@ -123,10 +123,8 @@ public class Part3 {
 				}
 				end = System.nanoTime();	
 				teamTime = end - start;
-				System.out.println("\nIt takes " + teamTime + 
-						" nanoseconds to retieve a random item at position " + position + 
-						" from " + numberOfTeams 
-						+ " team lists");
+				System.out.println("\nIt took " + teamTime + 
+						" nanoseconds to retrieve  a random item at position " + position);
 				
 
 				//System.nanoTime()
@@ -137,5 +135,6 @@ public class Part3 {
 			}
 
 		}
+
 		     
 }
